@@ -1,9 +1,11 @@
+import Sidebar from "./components/Sidebar";
+
 function App() {
-    return (
-        <div>
-            <h1 className="p-6">Task Manager</h1>
-        </div>
-    );
+  return (
+    <div>
+      <Sidebar />
+    </div>
+  );
 }
 
 export default App;
