@@ -1,0 +1,46 @@
+const TASKS = [
+  {
+    id: 1,
+    title: "Estudar React",
+    description: "Revisar os conceitos de hooks e componentes.",
+    time: "morning",
+    status: "done",
+  },
+  {
+    id: 2,
+    title: "Estudar Next.js",
+    description: " Revisar os conceitos de pages e API routes.",
+    time: "morning",
+    status: "done",
+  },
+  {
+    id: 3,
+    title: "Treinar",
+    description: " Fazer treino de pernas e abdômen.",
+    time: "afternoon",
+    status: "in_progress",
+  },
+  {
+    id: 4,
+    title: "Fazer compras",
+    description: " Comprar frutas, verduras e legumes.",
+    time: "afternoon",
+    status: "in_progress",
+  },
+  {
+    id: 5,
+    title: "Descansar",
+    description: " Assistir uma série ou ler um livro.",
+    time: "evening",
+    status: "not_started",
+  },
+  {
+    id: 6,
+    title: "Meditar",
+    description: " Praticar meditação por 10 minutos.",
+    time: "evening",
+    status: "not_started",
+  },
+];
+
+export default TASKS;
