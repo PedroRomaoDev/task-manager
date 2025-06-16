@@ -8,6 +8,7 @@ import TasksSeparator from "./TasksSeparator";
 import { useState } from "react";
 import TASKS from "../constants/tasks";
 import TaskItem from "./TaskItem";
+import { toast } from "sonner";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState(TASKS);
@@ -25,6 +26,7 @@ const Tasks = () => {
       // essa tarefa eu preciso atualizar
 
       if (task.status === "not_started") {
+        toast.success("Tarefa iniciada com sucesso!");
         return {
           ...task,
           status: "in_progress",
@@ -32,6 +34,9 @@ const Tasks = () => {
       }
 
       if (task.status === "in_progress") {
+        toast.success("Tarefa concluída com sucesso!");
+        // aqui eu preciso atualizar o status para "done"
+        // e não preciso mais do toast, pois já foi feito na linha anterior
         return {
           ...task,
           status: "done",
@@ -39,6 +44,8 @@ const Tasks = () => {
       }
 
       if (task.status === "done") {
+        toast.success("Tarefa reiniciada!");
+        // aqui eu preciso atualizar o status para "not_started"
         return {
           ...task,
           status: "not_started",
@@ -52,6 +59,7 @@ const Tasks = () => {
   const handleTaskDeleteClick = (taskId) => {
     const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
+    toast.success("Tarefa deletada com sucesso!");
   };
 
   return (
