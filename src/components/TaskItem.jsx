@@ -1,5 +1,5 @@
+import { CheckIcon, DetailsIcon, LoaderIcon, TrashIcon } from "../assets/icons";
 import Button from "./Button";
-import { TrashIcon, DetailsIcon, LoaderIcon, CheckIcon } from "../assets/icons";
 
 const TaskItem = ({ task, handleCheckboxClick, handleDeleteClick }) => {
   const getStatusClasses = () => {
