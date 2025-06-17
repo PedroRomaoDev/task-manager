@@ -27,7 +27,6 @@ const Tasks = () => {
       if (task.id !== taskId) {
         return task;
       }
-
       // essa tarefa eu preciso atualizar
 
       if (task.status === "not_started") {
@@ -61,10 +60,17 @@ const Tasks = () => {
     });
     setTasks(newTasks);
   };
+
   const handleTaskDeleteClick = (taskId) => {
     const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
     toast.success("Tarefa deletada com sucesso!");
+  };
+
+  const handleAddTaskSubmit = (task) => {
+    setTasks([...tasks, task]);
+
+    toast.success("Tarefa adicionada com sucesso!");
   };
 
   return (
@@ -91,6 +97,7 @@ const Tasks = () => {
           <AddTaskDialog
             IsOpen={addTaskDialogIsOpen}
             handleClose={() => setAddTaskDialogIsOpen(false)}
+            handleSubmit={handleAddTaskSubmit}
           />
         </div>
       </div>
