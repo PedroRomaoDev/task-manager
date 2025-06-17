@@ -1,6 +1,6 @@
 import "./AddTaskDialog.css";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { CSSTransition } from "react-transition-group";
 import { v4 } from "uuid";
@@ -10,10 +10,19 @@ import Input from "./Input";
 import TimeSelect from "./TimeSelect";
 
 const AddTaskDialog = ({ IsOpen, handleClose, handleSubmit }) => {
-  const [title, setTitle] = useState();
-  const [time, setTime] = useState();
-  const [description, setDescription] = useState();
+  const [title, setTitle] = useState("");
+  const [time, setTime] = useState("morning");
+  const [description, setDescription] = useState("");
+
   const nodeRef = useRef();
+
+  useEffect(() => {
+    if (!IsOpen) {
+      setTitle("");
+      setTime("morning");
+      setDescription("");
+    }
+  }, [IsOpen]);
 
   const handleSaveClick = () => {
     handleSubmit({
@@ -57,6 +66,7 @@ const AddTaskDialog = ({ IsOpen, handleClose, handleSubmit }) => {
                   value={title}
                   onChange={(event) => setTitle(event.target.value)}
                 />
+
                 <TimeSelect
                   value={time}
                   onChange={(event) => setTime(event.target.value)}
@@ -69,20 +79,19 @@ const AddTaskDialog = ({ IsOpen, handleClose, handleSubmit }) => {
                   value={description}
                   onChange={(event) => setDescription(event.target.value)}
                 />
-
                 <div className="flex gap-3">
                   <Button
                     size="large"
                     className="w-full"
-                    variant="secundary"
+                    variant="secondary"
                     onClick={handleClose}
                   >
                     Cancelar
                   </Button>
                   <Button
-                    size="large "
+                    size="large"
                     className="w-full"
-                    onClick={() => handleSaveClick()}
+                    onClick={handleSaveClick}
                   >
                     Salvar
                   </Button>
