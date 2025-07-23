@@ -10,7 +10,7 @@ import Button from "./Button";
 import Input from "./Input";
 import TimeSelect from "./TimeSelect";
 
-const AddTaskDialog = ({ IsOpen, handleClose, handleSubmit }) => {
+const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
   const [errors, setErrors] = useState([]);
 
   const nodeRef = useRef();
@@ -20,10 +20,6 @@ const AddTaskDialog = ({ IsOpen, handleClose, handleSubmit }) => {
 
   const handleSaveClick = () => {
     const newErrors = [];
-
-    console.log(titleRef.current.value);
-    console.log(descriptionRef.current.value);
-    console.log(timeRef.current.value);
 
     const title = titleRef.current.value;
     const description = descriptionRef.current.value;
@@ -49,7 +45,9 @@ const AddTaskDialog = ({ IsOpen, handleClose, handleSubmit }) => {
         message: "A descrição é obrigatória.",
       });
     }
+
     setErrors(newErrors);
+
     if (newErrors.length > 0) {
       return;
     }
@@ -73,7 +71,7 @@ const AddTaskDialog = ({ IsOpen, handleClose, handleSubmit }) => {
   return (
     <CSSTransition
       nodeRef={nodeRef}
-      in={IsOpen}
+      in={isOpen}
       timeout={500}
       classNames="add-task-dialog"
       unmountOnExit
@@ -116,7 +114,7 @@ const AddTaskDialog = ({ IsOpen, handleClose, handleSubmit }) => {
                   <Button
                     size="large"
                     className="w-full"
-                    color="secondary"
+                    color="secundary"
                     onClick={handleClose}
                   >
                     Cancelar
@@ -140,7 +138,7 @@ const AddTaskDialog = ({ IsOpen, handleClose, handleSubmit }) => {
 };
 
 AddTaskDialog.propTypes = {
-  IsOpen: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
   handleClose: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };

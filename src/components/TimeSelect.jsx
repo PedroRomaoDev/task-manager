@@ -11,7 +11,7 @@ const TimeSelect = forwardRef((props, ref) => {
 
       <select
         id="time"
-        className=";px-4 rounded-lg border border-solid border-brand-border py-3 outline-brand-primary placeholder:text-sm placeholder:text-brand-text-gray"
+        className="rounded-lg border border-solid border-brand-border px-4 py-3 outline-brand-primary placeholder:text-sm placeholder:text-brand-text-gray"
         {...props}
         ref={ref}
       >
@@ -30,7 +30,6 @@ const TimeSelect = forwardRef((props, ref) => {
 TimeSelect.displayName = "TimeSelect";
 TimeSelect.propTypes = {
   errorMessage: PropTypes.string,
-  // string: mensagem de erro a ser exibida abaixo do campo
 };
 
 export default TimeSelect;
