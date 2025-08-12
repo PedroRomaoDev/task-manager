@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
 import { CheckIcon, DetailsIcon, LoaderIcon, TrashIcon } from "../assets/icons";
@@ -51,7 +52,7 @@ const TaskItem = ({ task, handleCheckboxClick, onDeleteSucess }) => {
           />
           {task.status === "done" && <CheckIcon />}
           {task.status === "in_progress" && (
-            <LoaderIcon className="animate-spin text-brand-process" />
+            <LoaderIcon className="animate-spin text-brand-white" />
           )}
         </label>
 
@@ -70,9 +71,9 @@ const TaskItem = ({ task, handleCheckboxClick, onDeleteSucess }) => {
             <TrashIcon className="text-brand-text-gray" />
           )}
         </Button>
-        <a href="#" className="transition hover:opacity-75">
+        <Link to={`/task/${task.id}`} className="transition hover:opacity-75">
           <DetailsIcon />
-        </a>
+        </Link>
       </div>
     </div>
   );
