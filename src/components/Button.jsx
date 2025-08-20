@@ -15,6 +15,7 @@ const Button = ({
         primary: "bg-brand-primary text-white",
         ghost: "bg-transparent text-brand-dark-gray",
         secundary: "bg-brand-light-gray text-brand-dark-blue",
+        danger: "bg-brand-danger text-brand-white",
       },
       size: {
         small: "py-1 text-xs",
@@ -46,7 +47,7 @@ Button.propTypes = {
   // node: qualquer coisa que pode ser renderizada, como texto, número, elemento React, etc.
   // element: um elemento React específico, como <div />, <span />, etc.
 
-  color: PropTypes.oneOf(["primary", "ghost", "secundary"]),
+  color: PropTypes.oneOf(["primary", "ghost", "secundary", "danger"]),
   size: PropTypes.oneOf(["small", "large"]),
   className: PropTypes.string,
 };
