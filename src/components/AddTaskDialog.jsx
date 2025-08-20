@@ -22,6 +22,7 @@ const AddTaskDialog = ({ isOpen, handleClose, onSubmitSuccess }) => {
   const timeRef = useRef();
 
   const handleSaveClick = async () => {
+    setIsLoading(true);
     const newErrors = [];
 
     const title = titleRef.current.value;
