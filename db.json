@@ -11,7 +11,7 @@
       "id": "3",
       "title": "editada agora",
       "description": " Fazer treino de pernas e abdômen.",
-      "time": "afternoon",
+      "time": "evening",
       "status": "in_progress"
     },
     {
@@ -19,27 +19,6 @@
       "title": "Descansar",
       "description": " Assistir uma série ou ler um livro.",
       "time": "evening",
-      "status": "not_started"
-    },
-    {
-      "id": "3eb52318-608b-4940-a258-777981099d1f",
-      "title": "teste adc moss",
-      "time": "morning",
-      "description": "teste",
-      "status": "not_started"
-    },
-    {
-      "id": "1e63f23e-7ead-4f0f-b654-01a6b3424b70",
-      "title": "teste2",
-      "time": "morning",
-      "description": "kkkk",
-      "status": "not_started"
-    },
-    {
-      "id": "192b9177-aecd-4fc3-80ba-a5688735194f",
-      "title": "tarefa adc",
-      "time": "morning",
-      "description": "adc",
       "status": "not_started"
     }
   ]

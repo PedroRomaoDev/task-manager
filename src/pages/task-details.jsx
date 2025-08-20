@@ -91,6 +91,17 @@ const TaskDetailsPage = () => {
     toast.success("Tarefa atualizada com sucesso!");
   };
 
+  const handleDeleteClick = async () => {
+    const response = await fetch(`http://localhost:3000/tasks/${task.id}`, {
+      method: "DELETE",
+    });
+    if (!response.ok) {
+      return toast.error("Erro ao deletar tarefa. Por favor, tente novamente.");
+    }
+    toast.success("Tarefa deletada com sucesso!");
+    navigate(-1);
+  };
+
   const titleError = errors.find((error) => error.inputName === "title");
   const timeError = errors.find((error) => error.inputName === "time");
   const descriptionError = errors.find(
@@ -125,7 +136,11 @@ const TaskDetailsPage = () => {
           </div>
 
           {/* parte da direita */}
-          <Button className="h-fit self-end" color="danger">
+          <Button
+            className="h-fit self-end"
+            color="danger"
+            onClick={handleDeleteClick}
+          >
             <TrashIcon />
             Deletar tarefa
           </Button>
