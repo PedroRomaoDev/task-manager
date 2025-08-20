@@ -1,25 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "1",
-      "title": "Estudar React",
-      "description": "Revisar os conceitos de hooks e componentes.",
-      "time": "morning",
-      "status": "done"
-    },
-    {
-      "id": "3",
-      "title": "editada agora",
-      "description": " Fazer treino de pernas e abdômen.",
-      "time": "evening",
-      "status": "in_progress"
-    },
-    {
-      "id": "5",
-      "title": "Descansar",
-      "description": " Assistir uma série ou ler um livro.",
-      "time": "evening",
-      "status": "not_started"
-    }
-  ]
+  "tasks": []
 }
