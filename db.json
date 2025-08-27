@@ -1,31 +1,10 @@
 {
   "tasks": [
     {
-      "id": "25adffba-3b81-4e0c-9cbf-4d9cd038c5f1",
-      "title": "pedro               k",
+      "id": "07683dc6-d8af-45b7-ac40-91978e640d96",
+      "title": "pedro editado dnv",
       "time": "morning",
-      "description": "Fazer treino de pernas e abdômen.",
-      "status": "not_started"
-    },
-    {
-      "id": "f49a5fb1-307a-4785-81fc-9ad9cf304ab5",
-      "title": "doido pra cagar",
-      "time": "morning",
-      "description": "testekkkkkk",
-      "status": "not_started"
-    },
-    {
-      "id": "305902ab-3cc2-4bf9-8c53-44e2f35ead3a",
-      "title": "teste",
-      "time": "morning",
-      "description": "teste",
-      "status": "not_started"
-    },
-    {
-      "id": "3aa79dd4-b375-4b02-8f04-f9c8e0fac71d",
-      "title": "asadsa",
-      "time": "afternoon",
-      "description": "asdad",
+      "description": "kkk",
       "status": "not_started"
     }
   ]
