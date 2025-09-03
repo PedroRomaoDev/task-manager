@@ -28,9 +28,6 @@ const SidebarButton = ({ children, to }) => {
 SidebarButton.propTypes = {
   children: PropTypes.node.isRequired,
   // node: qualquer coisa que pode ser renderizada, como texto, número, elemento React, etc.
-  color: PropTypes.oneOf(["unselected", "selected"]),
-  // unselected: botão não selecionado, com cor de texto padrão
-  // selected: botão selecionado, com fundo e texto destacados
 };
 
 export default SidebarButton;
