@@ -62,7 +62,7 @@ const TaskItem = ({ task }) => {
 
   return (
     <div
-      className={`flex items-center justify-between gap-2 rounded-lg bg-opacity-10 px-4 py-3 text-sm transition ${getStatusClasses()}`}
+      className={`flex items-center justify-between gap-2 rounded-lg bg-opacity-5 px-4 py-3 text-sm transition ${getStatusClasses()}`}
     >
       <div className="flex items-center gap-2">
         <label
