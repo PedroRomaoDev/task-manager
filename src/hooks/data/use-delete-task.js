@@ -7,14 +7,14 @@ import { api } from "../../lib/axios";
 export const useDeleteTask = (taskId) => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationKey: taskMutationKeys.delete(taskId),
+    mutationKey: taskMutationKeys.delete(),
     mutationFn: async () => {
       const { data: deletedTask } = await api.delete(`/tasks/${taskId}`);
       return deletedTask;
     },
-    onSuccess: (deletedTask) => {
-      queryClient.setQueryData(taskQueryKeys.getAll(), (oldTask) => {
-        return oldTask.filter((oldTask) => oldTask.id !== deletedTask.id);
+    onSuccess: () => {
+      queryClient.setQueryData(taskQueryKeys.getAll(), (oldTasks) => {
+        return oldTasks.filter((task) => task.id !== taskId);
       });
     },
   });

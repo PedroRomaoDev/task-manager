@@ -6,34 +6,6 @@
       "time": "morning",
       "description": "oi",
       "status": "in_progress"
-    },
-    {
-      "id": "701e811e-9b18-4eee-ac42-b70c521b9ccc",
-      "title": "zackzincc",
-      "time": "morning",
-      "description": "pooi",
-      "status": "not_started"
-    },
-    {
-      "id": "95bd428f-3b9a-404a-bcbd-5b01de25265e",
-      "title": "peido",
-      "time": "morning",
-      "description": "pau grande",
-      "status": "done"
-    },
-    {
-      "id": "5175fd5c-a350-4342-a7e4-fa1c3e60dc30",
-      "title": "natacao",
-      "time": "morning",
-      "description": "kkk",
-      "status": "not_started"
-    },
-    {
-      "id": "3aa69307-4300-4171-ba6b-ba9c00487aeb",
-      "title": "igreja",
-      "time": "morning",
-      "description": "lll",
-      "status": "in_progress"
     }
   ]
 }
